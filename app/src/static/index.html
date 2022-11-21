@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/jquery-3.6.1.min.js"></script>
+    <script src="script/posts-sender.js"></script>
+    <title> Anonpost</title>
+</head>
+<body>
+    <div class="container">
+        <div class="window">
+            <div class="title-bar">
+                <div class="title-bar-text"> Anonpost </div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <menu role="tablist" aria-label="Sample Tabs">
+                    <button role="tab" aria-selected="true" id="send-btn"> Send post </button>
+                    <button role="tab" id="browse-btn"> Browse posts </button>
+                </menu>
+                <br>
+                <div id="send-message">
+                    <div class="field-row-stacked">
+                    <label for="author"> Name </label>
+                    <input id="author" type="text" placeholder="anonymous" size="26">
+                    <label for="message"> Message </label>
+                    <textarea id="message" placeholder="Change da world, my final message. Goodbye" rows="8" cols="12"></textarea>
+                    <br>
+                    <!-- Go javascript, do your dirty job! -->
+                    <button onclick=sendMessage()> Submit </button>
+                    </div>
+                </div>
+                <div id="browse-posts"> </div>
+            </div>
+        </div>
+    </div>
+    <script src="script/posts-browser.js"> </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "anonpost",
+  "version": "1.0.0",
+  "description": "A simple bare bones webapp for posting anonymous messages on a board",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "echo \"Production hasn't been implemented, try npm run dev\"",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "github.com/stoicboomer",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "validator": "^13.7.0",
+    "wait-port": "^1.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

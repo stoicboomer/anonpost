@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    max-width: 500px;
+
+    margin: 0 auto;
+    transform: translateY(50%);
+}
+
+.window-body {
+    height: 250px;
+}
+
+.field-row-stacked  input {
+    width: 20em;
+}
+
+.field-row-stacked  textarea {
+    width: 25em;
+    resize: both;
+    border: 1px solid #7f9db9;
+}
+
+.field-row-stacked  button {
+    width: 30%;
+    margin: 10px;
+    margin-left: auto;
+}
+
+#browse-posts {
+    display: none;
+    height: 200px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.post {
+    background-color: aliceblue;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.post-author {
+    font-weight: bold;
+    /* Same as 4chan lol */
+    color: #117743;
+    margin-left: 10px;
+}
+
+.post-content {
+    margin: 10px;
+}
+
+.author {
+    display: inline;
+}

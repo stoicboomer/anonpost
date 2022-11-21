@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+  app:
+    image: node:16-alpine
+    command: sh -c "npm install && npm run dev"
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    ports:
+      - 3000:3000
+    networks:
+      - anon-post
+    #Insecure! Don't do this at home!
+    environment:
+      MYSQL_ROOT_PASSWORD: (Posting-1337!
+      MYSQL_DATABASE: anonpost
+      MYSQL_HOST: anondb
+
+  database:
+    image: mysql:5.7
+    volumes:
+      - anonpost-db:/var/lib/mysql
+    networks:
+      anon-post:
+        aliases:
+          - anondb
+    environment:
+      MYSQL_ROOT_PASSWORD: (Posting-1337!
+      MYSQL_DATABASE: anonpost
+
+volumes:
+  anonpost-db:
+networks:
+  anon-post:
