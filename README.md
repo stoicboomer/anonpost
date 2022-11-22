@@ -9,13 +9,8 @@ Unfortunately my html/css skills suck, so don't expect a friendly client experie
 
 This project is heavily inspired by the docker [getting-started](https://github.com/docker/getting-started) repository.
 
-Two containers are connected in the same virtual network interface to communicate and they implement correspondingly the front and back end. The front end is a nodejs application that utilizes [express.js](https://expressjs.com/) for handling incoming requests. It offers both a static page and APIs endpoints for interacting with the database a.k.a the second container (the APIs are used by the static pages with some fetch requests from the front end). The APIs endpoints are
-- POST /send 
-	Sends a new post to the database
-- GET /dump
-	Extracts the saved posts from the database
+Two containers are connected in the same virtual network interface, they implement correspondingly the front and back end. The front end is a nodejs application that utilizes [express.js](https://expressjs.com/) for handling incoming requests. It offers both a static page and APIs endpoints to interact with the mysql database (the second container).
 
-Every input is properly sanitized to offer a secure experience :D (I hope so..) 
 ```
 (External user) -> localhost:3000 [frontend network]
                             |
@@ -31,8 +26,6 @@ Every input is properly sanitized to offer a secure experience :D (I hope so..)
                   |  "mysql database"  |=======( persistent volume )
                   +--------------------+        \_________________/
 ```
-
-
 
 ## Run the application
 ```
